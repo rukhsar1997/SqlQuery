@@ -1,0 +1,25 @@
+create database Customer;
+use Customer
+create table Person(id int Primary key identity,Firstname varchar(40),Lastname varchar(40),Adress varchar(60),City varchar (40))
+select * from Person
+Insert into Person(Firstname,Lastname,Adress,City) Values ('Ritu','Singh','Sector 66','Noida'),
+ ('Rukhsar','jahan','Sector 65','Delhi'),
+  ('Deshraj','Sharma','Sector 62','Noida1'),
+  ('Neeshu','Kumar','Sector 64','Noida2'),
+   ('Mona','Roy','Sector 52','Noida3')
+   Update Person 
+   Set Firstname='Suman',Lastname='Kumari' where id=1;
+   Delete from Person where Firstname='Deshraj';
+   select City from Person;
+   select DISTINCT Adress from Person;
+   SELECT * FROM Person
+WHERE City ='Noida';
+SELECT * FROM Person
+WHERE Adress='Sector 66' and Firstname='Suman';
+SELECT * FROM Person
+WHERE not  Adress='Sector 66';
+select * from Person
+order by Firstname;
+SELECT Firstname
+FROM Person
+WHERE Firstname IS NULL;
